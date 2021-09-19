@@ -1,0 +1,143 @@
+@font-face {
+    font-family: Yekan;
+    src: url('./assets/fonts/Yekan.ttf') format('truetype');
+}
+
+html {
+    height: 100vh;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    height: 100vh;
+    font-family: Yekan;
+}
+
+.bg-header-orange {
+    background-image: linear-gradient(to bottom, #ce593c, #fe724e);
+}
+
+.bg-orange {
+    background-image: linear-gradient(to bottom, #fe724e, #ce593c);
+}
+
+.text-orange {
+    color: #fe724e;
+}
+
+.border-orange {
+    border-color: #fe724e;
+}
+
+.rounded-header {
+    border-bottom-right-radius: 3rem/* 4px */
+    ;
+    border-bottom-left-radius: 3rem/* 4px */
+    ;
+}
+
+.rounded-navigation {
+    border-top-right-radius: 3rem/* 4px */
+    ;
+    border-top-left-radius: 3rem/* 4px */
+    ;
+    box-shadow: grey 0px 7px 20px 0px;
+}
+
+.input-filed {
+    border-color: #fe724e;
+    @apply border-2 rounded-full w-full px-6 py-3 my-3 outline-none;
+}
+
+.loader {
+    border-color: transparent;
+    border-top-color: #ffffff;
+    -webkit-animation: spinner 0.4s ease-in-out infinite;
+    animation: spinner 0.4s linear infinite;
+}
+
+@-webkit-keyframes spinner {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.border-invalid {
+    border-color: red!important;
+}
+
+.invalid {
+    -webkit-animation: shake 0.2s ease-in;
+    animation: shake 0.2s ease-in;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0%)
+    }
+    10% {
+        transform: translateX(-8px)
+    }
+    20% {
+        transform: translateX(0%)
+    }
+    30% {
+        transform: translateX(8px)
+    }
+    40% {
+        transform: translateX(0%)
+    }
+    50% {
+        transform: translateX(-8px)
+    }
+    60% {
+        transform: translateX(0%)
+    }
+    70% {
+        transform: translateX(8px)
+    }
+    80% {
+        transform: translateX(0%)
+    }
+    90% {
+        transform: translateX(-8px)
+    }
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+input[type="radio"] {
+    @apply outline-none appearance-none;
+}
+
+input[type="radio"]:after {
+    border-color: #fe724e;
+    content: "";
+    display: inline-block;
+    @apply w-5 h-5 rounded-full border-2 relative;
+}
+
+input[type="radio"]:checked:after {
+    background-color: #fe724e;
+    content: "";
+    display: inline-block;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
