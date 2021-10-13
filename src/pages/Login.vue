@@ -41,6 +41,8 @@
             class="w-full"
           />
         </transition>
+        
+        <!-- Forget Password -->
 
         <!-- <transition name="slide" mode="out-in">
           <forget-password

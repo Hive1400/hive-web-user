@@ -85,6 +85,7 @@ export default {
           });
       }
     },
+
     timer() {
       if (this.second > 0) {
         this.reSendCodeText = "ارسال مجدد کد بعد از " + this.second + " ثانیه";
@@ -98,6 +99,7 @@ export default {
         this.sentCode = false;
       }
     },
+
     nextLevel() {
       this.errorMessage = "";
       if (!this.loading) {
@@ -146,6 +148,7 @@ export default {
         }
       }
     },
+
     focus(i) {
       if (this.complete) {
         this.complete = false;
@@ -160,6 +163,7 @@ export default {
         }, 100);
       }
     },
+
     nextFocus(i) {
       let inputs = this.$refs["inputs"].children;
       let input = inputs[i];
@@ -198,6 +202,7 @@ export default {
       }
     },
   },
+  
   created() {
     this.reSendCodeText = "ارسال مجدد کد بعد از 30 ثانیه";
     this.reSendCodeTextColor = "text-gray-400";

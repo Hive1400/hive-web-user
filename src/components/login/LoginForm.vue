@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col px-8 py-2 h-full">
     <p class="text-center text-lg font-bold py-6">
-      برای وارد شدن به حساب کاربری خود<br />لطفا کد ملی و رمز عبور وار کنید
+      برای وارد شدن به حساب کاربری خود<br />لطفا کد ملی و رمز عبور را وارد کنید
     </p>
     <form action="">
       <div class="mt-6">
@@ -95,6 +95,7 @@ export default {
           });
       }
     },
+    
     checkVerify() {
       const self = this;
       this.axios
@@ -148,6 +149,7 @@ export default {
     forgetPassword() {
       this.$emit("forgetPassword", "");
     },
+
     invalidAnim(el) {
       const element = this.$refs[el];
       element.classList.add("invalid", "border-invalid");
@@ -155,12 +157,14 @@ export default {
         element.classList.remove("invalid");
       }, 200);
     },
+
     checkLength(e) {
       e.target.classList.remove("border-invalid");
       if (String(e.target.value).length > 9) {
         e.preventDefault();
       }
     },
+
     checkCodeMeli(code) {
       if (code.length < 10) return false;
       var L = code.length;
